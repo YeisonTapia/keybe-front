@@ -1,5 +1,9 @@
 # weather-app
 
+
+![example weather app](https://raw.githubusercontent.com/YeisonTapia/keybe-front/master/capture.png)
+
+
 ## Project setup
 ```
 npm install
@@ -17,3 +21,4 @@ npm run build
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+
