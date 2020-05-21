@@ -35,6 +35,7 @@
 </template>
 
 <script>
+import config from '../../config'
 import SearcCountry from '../components/SearchCountry';
 import Forecast from '../components/Forecast'
 export default {
@@ -62,7 +63,7 @@ export default {
     },
     searchWeather(lat, lng){
       this.isLoading = true
-      fetch(`http://localhost:3000/api/weather/${lat}/${lng}`)
+      fetch(`${config.weatherApi}/${lat}/${lng}`)
         .then(res => res.json())
         .then(res => {
           const {currently, hourly,daily} = res

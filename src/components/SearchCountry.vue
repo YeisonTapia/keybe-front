@@ -16,6 +16,8 @@
 </template>
 
 <script>
+  import config from '../../config'
+
   export default {
     data: () => ({
       descriptionLimit: 60,
@@ -52,7 +54,7 @@
         if (this.search === null || this.search === '' || this.search === undefined) return
         if (this.isLoading) return
         this.isLoading = true
-        fetch('http://localhost:3000/api/geocoder/'+val)
+        fetch(`${config.geocoderApi}/${val}`)
           .then(res => res.json())
           .then(res => {
             this.entries = res
